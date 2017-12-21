@@ -6,6 +6,8 @@ import { Http, Headers, RequestOptions } from '@angular/http';
 @Component({
     templateUrl: './contact.list.component.html'
 })
+
+// TODO: add search and paging functionality for larger contact lists.
 export class ContactListComponent {
     public contacts: any[];
 
@@ -19,7 +21,7 @@ export class ContactListComponent {
     } 
 
     delete(contact: Contact) {
-        // A protected click or warning would be smart here.
+        // TODO: A protected click or warning would be smart here to prevent accidental deletion.
         this.http.delete('/api/contacts/' + contact.id)
             .subscribe(results => {
                 this.contacts.splice(this.contacts.indexOf(contact), 1);
@@ -30,6 +32,7 @@ export class ContactListComponent {
 
 }
 
+// TODO: reorganize the front end model situation so we don't duplicate unnecessary code
 interface Contact {
     id: number;
     name: string;

@@ -8,6 +8,8 @@ namespace ContactManagerApi.Controllers
     [Route("api/contacts")]
     public class ContactController : Controller
     {
+        //TODO add search and paging functionality. Also add authorization and tie contacts to the user model so we only return relevant data. 
+        //TODO: Move update logic into Contact model so any restrictions and validations can be handled there. Keep this controller skinny
         private readonly ContactContext _context;
 
         public ContactController(ContactContext context)
