@@ -14,7 +14,7 @@ export class ContactEditComponent implements OnInit {
     public constructor(private http: Http, private route: ActivatedRoute, private location: Location) {
         this.contact = {
             "id": 0,
-            "name": "Your name here!",
+            "name": "",
             "address": "",
             "city": "",
             "state": "",
