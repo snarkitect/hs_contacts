@@ -18,6 +18,7 @@ I hadn't used .Net in a few years until this week, and I'd never used Angular un
     * Test to validate users only have access to each controller action for their own data.
     * Tests to ensure models won't save without validation passing
     * Tests for authentication flow
+10. Switch database providers to something production ready.
  
 
 
