@@ -1,0 +1,26 @@
+<section>
+    <div class="row">
+        <div class="col-xs-12 col-sm-8 col-md-10 table-responsive">
+            <h1>Contacts</h1>
+            <a [routerLink]="['/contacts/', 0]"><button>New</button></a>
+            <table class="table">
+                <thead>
+                    <tr>
+                        <td>Contact ID</td>
+                        <td>Name</td>
+                        <td>Complete</td>
+                        <td> </td>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let contact of contacts">
+                        <td>{{ contact.id }}</td>
+                        <td>{{ contact.name }}</td>
+                        <td></td>>
+                        <td><a [routerLink]="['/contacts/', contact.id]"><button>Edit</button></a> | <button (click)="delete(todo)">Delete</button></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</section>
